@@ -80,6 +80,27 @@ const DashboardPage = () => {
             >
               📋 Audit Logs (Phase 7)
             </button>
+            <button
+  onClick={() => navigate('/mail/inbox')}
+  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+>
+  📧 Inbox
+</button>
+<button
+  onClick={() => navigate('/mail/compose')}
+  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+>
+  ✉️ Compose
+</button>
+<button
+  onClick={() => navigate('/mail/sent')}
+  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+>
+  📤 Sent Mail
+</button>
           </nav>
         </aside>
 
