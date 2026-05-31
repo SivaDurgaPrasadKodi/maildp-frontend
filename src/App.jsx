@@ -1,12 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
 
-// Pages (we will build these one by one)
 import LoginPage from './pages/LoginPage'
 import DashboardPage from './pages/DashboardPage'
+import UsersPage from './pages/UsersPage'
+import DepartmentsPage from './pages/DepartmentsPage'
 import NotFoundPage from './pages/NotFoundPage'
 
-// Protected Route Component
 const ProtectedRoute = ({ children }) => {
   const { token } = useAuth()
   return token ? children : <Navigate to="/login" replace />
@@ -22,6 +22,22 @@ function App() {
         element={
           <ProtectedRoute>
             <DashboardPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/users"
+        element={
+          <ProtectedRoute>
+            <UsersPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/departments"
+        element={
+          <ProtectedRoute>
+            <DepartmentsPage />
           </ProtectedRoute>
         }
       />
