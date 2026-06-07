@@ -8,6 +8,8 @@ import DepartmentsPage from './pages/DepartmentsPage'
 import InboxPage from './pages/InboxPage'
 import ComposePage from './pages/ComposePage'
 import SentMailPage from './pages/SentMailPage'
+import DevicesPage from './pages/DevicesPage'
+import DeviceApprovalPage from './pages/DeviceApprovalPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 const ProtectedRoute = ({ children }) => {
@@ -26,6 +28,8 @@ function App() {
       <Route path="/mail/inbox" element={<ProtectedRoute><InboxPage /></ProtectedRoute>} />
       <Route path="/mail/compose" element={<ProtectedRoute><ComposePage /></ProtectedRoute>} />
       <Route path="/mail/sent" element={<ProtectedRoute><SentMailPage /></ProtectedRoute>} />
+      <Route path="/devices" element={<ProtectedRoute><DevicesPage /></ProtectedRoute>} />
+      <Route path="/devices/approval" element={<ProtectedRoute><DeviceApprovalPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )

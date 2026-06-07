@@ -38,6 +38,7 @@ const DashboardPage = () => {
         {/* Sidebar */}
         <aside className="w-64 min-h-screen bg-white shadow-sm p-4">
           <nav className="space-y-1">
+
             <button
               onClick={() => navigate('/dashboard')}
               className="w-full text-left px-4 py-3 rounded-lg text-gray-700
@@ -45,6 +46,7 @@ const DashboardPage = () => {
             >
               🏠 Dashboard
             </button>
+
             <button
               onClick={() => navigate('/users')}
               className="w-full text-left px-4 py-3 rounded-lg text-gray-700
@@ -52,6 +54,7 @@ const DashboardPage = () => {
             >
               👥 Users
             </button>
+
             <button
               onClick={() => navigate('/departments')}
               className="w-full text-left px-4 py-3 rounded-lg text-gray-700
@@ -59,20 +62,47 @@ const DashboardPage = () => {
             >
               🏢 Departments
             </button>
+
             <button
-              className="w-full text-left px-4 py-3 rounded-lg text-gray-400
-                         cursor-not-allowed font-medium"
-              disabled
+              onClick={() => navigate('/mail/inbox')}
+              className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
             >
-              📧 Mail (Phase 5)
+              📧 Inbox
             </button>
+
             <button
-              className="w-full text-left px-4 py-3 rounded-lg text-gray-400
-                         cursor-not-allowed font-medium"
-              disabled
+              onClick={() => navigate('/mail/compose')}
+              className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
             >
-              💻 Devices (Phase 6)
+              ✉️ Compose
             </button>
+
+            <button
+              onClick={() => navigate('/mail/sent')}
+              className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+            >
+              📤 Sent Mail
+            </button>
+
+            <button
+              onClick={() => navigate('/devices')}
+              className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+            >
+              💻 My Devices
+            </button>
+
+            <button
+              onClick={() => navigate('/devices/approval')}
+              className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+            >
+              🔐 Device Approval
+            </button>
+
             <button
               className="w-full text-left px-4 py-3 rounded-lg text-gray-400
                          cursor-not-allowed font-medium"
@@ -80,46 +110,34 @@ const DashboardPage = () => {
             >
               📋 Audit Logs (Phase 7)
             </button>
-            <button
-  onClick={() => navigate('/mail/inbox')}
-  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
-             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
->
-  📧 Inbox
-</button>
-<button
-  onClick={() => navigate('/mail/compose')}
-  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
-             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
->
-  ✉️ Compose
-</button>
-<button
-  onClick={() => navigate('/mail/sent')}
-  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
-             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
->
-  📤 Sent Mail
-</button>
+
           </nav>
         </aside>
 
         {/* Main Content */}
         <main className="flex-1 p-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl shadow p-6 text-center cursor-pointer
-                            hover:shadow-md transition"
-                 onClick={() => navigate('/users')}>
-              <p className="text-3xl font-bold text-blue-600">1</p>
+            <div
+              className="bg-white rounded-xl shadow p-6 text-center
+                          cursor-pointer hover:shadow-md transition"
+              onClick={() => navigate('/users')}
+            >
+              <p className="text-3xl font-bold text-blue-600">2</p>
               <p className="text-gray-500 mt-1">Total Users</p>
             </div>
-            <div className="bg-white rounded-xl shadow p-6 text-center cursor-pointer
-                            hover:shadow-md transition"
-                 onClick={() => navigate('/departments')}>
+            <div
+              className="bg-white rounded-xl shadow p-6 text-center
+                          cursor-pointer hover:shadow-md transition"
+              onClick={() => navigate('/departments')}
+            >
               <p className="text-3xl font-bold text-green-600">2</p>
               <p className="text-gray-500 mt-1">Departments</p>
             </div>
-            <div className="bg-white rounded-xl shadow p-6 text-center">
+            <div
+              className="bg-white rounded-xl shadow p-6 text-center
+                          cursor-pointer hover:shadow-md transition"
+              onClick={() => navigate('/devices/approval')}
+            >
               <p className="text-3xl font-bold text-orange-500">0</p>
               <p className="text-gray-500 mt-1">Pending Devices</p>
             </div>
@@ -134,6 +152,7 @@ const DashboardPage = () => {
             </p>
           </div>
         </main>
+
       </div>
     </div>
   )
