@@ -11,6 +11,8 @@ import SentMailPage from './pages/SentMailPage'
 import DevicesPage from './pages/DevicesPage'
 import DeviceApprovalPage from './pages/DeviceApprovalPage'
 import AuditLogsPage from './pages/AuditLogsPage'
+import SecurityAlertsPage from './pages/SecurityAlertsPage'
+import IncidentsPage from './pages/IncidentsPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 const ProtectedRoute = ({ children }) => {
@@ -32,6 +34,8 @@ function App() {
       <Route path="/devices" element={<ProtectedRoute><DevicesPage /></ProtectedRoute>} />
       <Route path="/devices/approval" element={<ProtectedRoute><DeviceApprovalPage /></ProtectedRoute>} />
       <Route path="/audit" element={<ProtectedRoute><AuditLogsPage /></ProtectedRoute>} />
+      <Route path="/security/alerts" element={<ProtectedRoute><SecurityAlertsPage /></ProtectedRoute>} />
+      <Route path="/security/incidents" element={<ProtectedRoute><IncidentsPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )

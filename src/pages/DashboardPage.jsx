@@ -110,6 +110,21 @@ const DashboardPage = () => {
             >
               📋 Audit Logs
             </button>
+            <button
+  onClick={() => navigate('/security/alerts')}
+  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+>
+  🚨 Security Alerts
+</button>
+
+<button
+  onClick={() => navigate('/security/incidents')}
+  className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+             hover:bg-blue-50 hover:text-blue-600 transition font-medium"
+>
+  🔥 Incidents
+</button>
 
           </nav>
         </aside>
