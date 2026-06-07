@@ -10,6 +10,7 @@ import ComposePage from './pages/ComposePage'
 import SentMailPage from './pages/SentMailPage'
 import DevicesPage from './pages/DevicesPage'
 import DeviceApprovalPage from './pages/DeviceApprovalPage'
+import AuditLogsPage from './pages/AuditLogsPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 const ProtectedRoute = ({ children }) => {
@@ -30,6 +31,7 @@ function App() {
       <Route path="/mail/sent" element={<ProtectedRoute><SentMailPage /></ProtectedRoute>} />
       <Route path="/devices" element={<ProtectedRoute><DevicesPage /></ProtectedRoute>} />
       <Route path="/devices/approval" element={<ProtectedRoute><DeviceApprovalPage /></ProtectedRoute>} />
+      <Route path="/audit" element={<ProtectedRoute><AuditLogsPage /></ProtectedRoute>} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   )

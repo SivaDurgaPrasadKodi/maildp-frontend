@@ -104,11 +104,11 @@ const DashboardPage = () => {
             </button>
 
             <button
-              className="w-full text-left px-4 py-3 rounded-lg text-gray-400
-                         cursor-not-allowed font-medium"
-              disabled
+             onClick={() => navigate('/audit')}
+             className="w-full text-left px-4 py-3 rounded-lg text-gray-700
+                         hover:bg-blue-50 hover:text-blue-600 transition font-medium"
             >
-              📋 Audit Logs (Phase 7)
+              📋 Audit Logs
             </button>
 
           </nav>
